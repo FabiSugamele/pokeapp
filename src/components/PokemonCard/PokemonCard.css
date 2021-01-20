@@ -1,0 +1,10 @@
+.pokemon-card {
+    margin: 0 0.5vw 2vh 0;
+    width: 100vw;
+    height: 15vh;
+
+    padding: 1em;
+
+    border: 2px solid #000000;
+    border-left: none;
+}
