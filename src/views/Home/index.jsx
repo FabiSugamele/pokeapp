@@ -16,7 +16,7 @@ const Home = () => {
     }, []);
 
     const pokemonsList = pokemons.map((pokemon) => {
-        console.log(pokemon.url)
+        console.log(pokemon.name)
         return <PokemonCard name={pokemon.name} />
     })
 

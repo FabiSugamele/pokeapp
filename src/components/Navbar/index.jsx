@@ -12,7 +12,6 @@ const Navbar = (props) => {
                 <ul className="navbar-items-list">
                     <li className="item"><a href="/">Todos PKMN</a></li>
                     <li className="item"><a href="/">Meus PKMN</a></li>
-                    <li className="item"></li>
                 </ul>
                 <form className="form-search" action="action_page.php">
                     <input type="text" placeholder="Search.." name="search"></input>
