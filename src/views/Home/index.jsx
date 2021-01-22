@@ -35,9 +35,13 @@ const Home = () => {
 
     const pokemonsList = pokemons.map((pokemon) => {
         let pokemonId = pokemon.url.replace('https://pokeapi.co/api/v2/pokemon/','').replace('/','');
+        
+        let info = axios.get("https://pokeapi.co/api/v2/pokemon/"+pokemonId)
+        .then(infos => { return infos.data});
+
         return <PokemonCard name={pokemon.name} 
                 image={`https://pokeres.bastionbot.org/images/pokemon/${pokemonId}.png`}
-                key={pokemonId}
+                number={pokemonId}
         />
     })
 
