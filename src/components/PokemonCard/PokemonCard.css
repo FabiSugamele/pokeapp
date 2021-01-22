@@ -5,6 +5,17 @@
 
     padding: 1em;
 
+    display: flex;
+    align-items: center;
+
     border: 2px solid #000000;
     border-left: none;
+}
+
+.pokemon-image {
+    width: 8vw;
+}
+
+.pokemon-image img {
+    width: 5vw;
 }

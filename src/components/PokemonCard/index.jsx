@@ -3,8 +3,8 @@ import "./PokemonCard.css";
 
 const PokemonCard = (props) => {
     return (
-        <div className="pokemon-card">
-            <div className="pokemon-image">{props.image}</div>
+        <div key={props.id} className="pokemon-card">
+            <div  className="pokemon-image"><img src={props.image}></img></div>
             <div className="pokemon-info">
                 <h3 className="pokemon-number">{props.number}</h3>
                 <p className="pokemon-name">{props.name}</p>

@@ -21,7 +21,6 @@ const Home = () => {
     function changePokemonsList() {
         setCurrentPokemons(`https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=20`);
         getPokemons(currentPokemons);
-        console.log(currentPokemons)
     }
 
     function next() {
@@ -35,7 +34,11 @@ const Home = () => {
     }
 
     const pokemonsList = pokemons.map((pokemon) => {
-        return <PokemonCard name={pokemon.name} />
+        let pokemonId = pokemon.url.replace('https://pokeapi.co/api/v2/pokemon/','').replace('/','');
+        return <PokemonCard name={pokemon.name} 
+                image={`https://pokeres.bastionbot.org/images/pokemon/${pokemonId}.png`}
+                key={pokemonId}
+        />
     })
 
     return (
