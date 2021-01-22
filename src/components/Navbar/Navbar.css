@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+}
+
+.logo-img {
+    width: 50%;
+}
+
+.navbar-items, .navbar-items-list {
+    display: flex;
+    align-items: center;   
+}
+
+.item {
+    padding:0 0.5rem;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: 1s ease ;
+}
+a:hover {
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px gray;
+}
