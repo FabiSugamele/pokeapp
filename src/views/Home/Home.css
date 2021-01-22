@@ -3,3 +3,14 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.button-pages {
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.page-btn {
+    padding: 1rem;
+    margin: 1rem;
+}
