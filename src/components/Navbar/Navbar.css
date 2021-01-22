@@ -20,7 +20,7 @@
     list-style: none;
 }
 
-a {
+.link {
     text-decoration: none;
     transition: 1s ease ;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
-import logo from "./poke-logo.png"
+import logo from "./poke-logo.png";
+import {Link} from 'react-router-dom';
 
 const Navbar = (props) => {
     return (
@@ -10,8 +11,8 @@ const Navbar = (props) => {
             </div>
             <div className="navbar-items">
                 <ul className="navbar-items-list">
-                    <li className="item"><a href="/">Todos PKMN</a></li>
-                    <li className="item"><a href="/">Meus PKMN</a></li>
+                    <li className="item"><Link className="link" to="/">Todos PKMN</Link></li>
+                    <li className="item"><Link className="link" to="/mypokemons">Meus PKMN</Link></li>
                 </ul>
                 <form className="form-search" action="action_page.php">
                     <input type="text" placeholder="Search.." name="search"></input>
