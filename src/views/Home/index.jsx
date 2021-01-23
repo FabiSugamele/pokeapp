@@ -33,15 +33,21 @@ const Home = () => {
         offset >= 20 ? setOffset(offset - 20) : setOffset(0);
     }
 
+     async function getInfoPokemon(url) {
+        return new Promise((resolve, reject) => {
+            fetch(url)
+            .then(res => res.json())
+            .then(data => {resolve(data)})
+        })
+    }
+
     const pokemonsList = pokemons.map((pokemon) => {
         let pokemonId = pokemon.url.replace('https://pokeapi.co/api/v2/pokemon/','').replace('/','');
         
-        let info = axios.get("https://pokeapi.co/api/v2/pokemon/"+pokemonId)
-        .then(infos => { return infos.data});
-
         return <PokemonCard name={pokemon.name} 
                 image={`https://pokeres.bastionbot.org/images/pokemon/${pokemonId}.png`}
                 number={pokemonId}
+                type={getInfoPokemon("https://pokeapi.co/api/v2/pokemon/"+pokemonId).then(function(result){return result.types})}
         />
     })
 
